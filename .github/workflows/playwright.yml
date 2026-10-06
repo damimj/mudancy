@@ -1,0 +1,63 @@
+name: Tests
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v7
+    - uses: actions/setup-node@v7
+      with:
+        node-version: lts/*
+        cache: npm
+    - run: npm ci
+    - run: npm run lint
+    - run: npm run test -- --run
+    - run: npm run build
+      env:
+        VITE_SUPABASE_URL: https://placeholder.supabase.co
+        VITE_SUPABASE_ANON_KEY: placeholder
+
+  # End-to-end tests need a SEPARATE Supabase project. They only run when the
+  # repository has the E2E_* secrets configured (forks and PRs from forks skip
+  # them). See "Running the tests" in the README.
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      VITE_SUPABASE_URL: ${{ secrets.E2E_SUPABASE_URL }}
+      VITE_SUPABASE_ANON_KEY: ${{ secrets.E2E_SUPABASE_ANON_KEY }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.E2E_SUPABASE_SERVICE_ROLE_KEY }}
+      TEST_ADMIN_EMAIL: ${{ secrets.E2E_ADMIN_EMAIL }}
+    steps:
+    - name: Check for e2e secrets
+      id: check
+      run: |
+        if [ -n "$VITE_SUPABASE_URL" ] && [ -n "$SUPABASE_SERVICE_ROLE_KEY" ]; then echo "enabled=true" >> "$GITHUB_OUTPUT"; fi
+    - uses: actions/checkout@v7
+      if: steps.check.outputs.enabled == 'true'
+    - uses: actions/setup-node@v7
+      if: steps.check.outputs.enabled == 'true'
+      with:
+        node-version: lts/*
+        cache: npm
+    - if: steps.check.outputs.enabled == 'true'
+      run: npm ci
+    - name: Install Playwright browsers
+      if: steps.check.outputs.enabled == 'true'
+      run: npx playwright install --with-deps chromium webkit
+    - name: Run Playwright tests
+      if: steps.check.outputs.enabled == 'true'
+      run: npm run test:e2e
+    - name: Clean up any leftover test products
+      if: always() && steps.check.outputs.enabled == 'true'
+      run: npm run test:e2e:cleanup
+    - uses: actions/upload-artifact@v7
+      if: ${{ !cancelled() && steps.check.outputs.enabled == 'true' }}
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30

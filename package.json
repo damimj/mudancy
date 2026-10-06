@@ -1,0 +1,44 @@
+{
+  "name": "mudancy",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:cleanup": "node scripts/cleanup-test-products.mjs",
+    "db:push": "node scripts/run-sql.mjs",
+    "db:push:test": "node scripts/run-sql.mjs --env .env.test.local",
+    "db:setup:test": "npm run db:push:test && node scripts/run-sql.mjs scripts/test-db-marker.sql --env .env.test.local && node scripts/setup-test-admin.mjs"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
+    "@dnd-kit/sortable": "^10.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "@supabase/supabase-js": "^2.116.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "dotenv": "^17.4.2",
+    "jsdom": "^27.0.1",
+    "oxlint": "^1.81.0",
+    "pg": "^8.23.0",
+    "vite": "^8.3.0",
+    "vitest": "^3.2.7"
+  },
+  "license": "AGPL-3.0-only",
+  "description": "Self-hosted catalog to sell your stuff when you move. Bilingual (Spanish/English), built with React and Supabase."
+}

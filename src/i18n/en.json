@@ -1,0 +1,110 @@
+{
+  "site": {
+    "tagline": "Pre-loved items looking for a new home"
+  },
+  "nav": {
+    "admin": "Admin"
+  },
+  "home": {
+    "allCategories": "All",
+    "noProducts": "No products yet"
+  },
+  "status": {
+    "available": "Available",
+    "reserved": "Reserved",
+    "sold": "Sold"
+  },
+  "product": {
+    "reserveButton": "Reserve",
+    "reservedButton": "Reserved",
+    "soldButton": "Sold",
+    "backToHome": "Back to all items",
+    "description": "Description",
+    "availableFrom": "Available from",
+    "condition": "Condition",
+    "originalLink": "View original listing"
+  },
+  "reserveModal": {
+    "title": "Reserve this item",
+    "description": "Leave your details and the seller will contact you to arrange pickup.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phone": "Phone number",
+    "phoneHint": "Include your country code",
+    "submit": "Confirm reservation",
+    "cancel": "Cancel",
+    "success": "Thanks for reserving! The seller will be in touch as soon as possible.",
+    "error": "Something went wrong. Please try again.",
+    "alreadyReserved": "Sorry, this item was just reserved by someone else."
+  },
+  "validation": {
+    "required": "This field is required"
+  },
+  "admin": {
+    "login": {
+      "title": "Admin login",
+      "description": "Enter your email and we'll send you a link to sign in. No password needed.",
+      "email": "Email",
+      "submit": "Send me a sign-in link",
+      "sending": "Sending...",
+      "sent": "Check your inbox! We sent a sign-in link to {email}. Open it on this device.",
+      "error": "We couldn't send the link. Make sure this email is registered as an admin and try again.",
+      "notAdmin": "{email} is signed in, but it is not listed as an admin of this shop.",
+      "useAnother": "Sign out and use another email"
+    },
+    "nav": {
+      "products": "Products",
+      "categories": "Categories",
+      "logout": "Log out",
+      "viewSite": "View site"
+    },
+    "products": {
+      "title": "Products",
+      "new": "New product",
+      "empty": "No products yet",
+      "edit": "Edit",
+      "delete": "Delete",
+      "deleteConfirm": "Delete this product? This cannot be undone.",
+      "markAvailable": "Mark available",
+      "markSold": "Mark sold",
+      "reservedBy": "Reserved by",
+      "preview": "Preview"
+    },
+    "stats": {
+      "estimated": "Estimated total",
+      "sold": "Sold total"
+    },
+    "form": {
+      "contentLanguage": "Content language",
+      "translationHint": "Write the title, description and condition in each language you want to offer. At least one title is required; visitors see the other language if one is missing.",
+      "title": "Title",
+      "description": "Description",
+      "condition": "Condition",
+      "conditionHint": "e.g. \"8 months old, perfect condition\"",
+      "availableFrom": "Available from",
+      "originalLink": "Original link",
+      "originalLinkHint": "e.g. the original store page",
+      "price": "Price",
+      "category": "Category",
+      "selectCategory": "Select a category",
+      "photos": "Photos",
+      "addPhotos": "Add photos",
+      "photosHint": "Drag to reorder — the first photo is the cover.",
+      "coverPhoto": "Cover",
+      "save": "Save",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "saveError": "The product could not be saved. Please try again.",
+      "newProduct": "New product",
+      "editProduct": "Edit product"
+    },
+    "categories": {
+      "title": "Categories",
+      "new": "New category",
+      "name": "Name",
+      "nameHint": "Fill in at least one language.",
+      "delete": "Delete",
+      "add": "Add category"
+    }
+  }
+}

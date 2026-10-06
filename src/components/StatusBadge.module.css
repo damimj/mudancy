@@ -1,0 +1,23 @@
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.available {
+  background: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.reserved {
+  background: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.sold {
+  background: var(--color-danger-bg);
+  color: var(--color-danger);
+}

@@ -1,0 +1,110 @@
+{
+  "site": {
+    "tagline": "Artículos usados que buscan un nuevo hogar"
+  },
+  "nav": {
+    "admin": "Admin"
+  },
+  "home": {
+    "allCategories": "Todo",
+    "noProducts": "Todavía no hay productos"
+  },
+  "status": {
+    "available": "Disponible",
+    "reserved": "Reservado",
+    "sold": "Vendido"
+  },
+  "product": {
+    "reserveButton": "Reservar",
+    "reservedButton": "Reservado",
+    "soldButton": "Vendido",
+    "backToHome": "Volver a todos los artículos",
+    "description": "Descripción",
+    "availableFrom": "Disponible desde",
+    "condition": "Estado",
+    "originalLink": "Ver publicación original"
+  },
+  "reserveModal": {
+    "title": "Reservar este artículo",
+    "description": "Déjanos tus datos y el vendedor te contactará para coordinar la entrega.",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "phone": "Teléfono",
+    "phoneHint": "Incluye el código de tu país",
+    "submit": "Confirmar reserva",
+    "cancel": "Cancelar",
+    "success": "¡Gracias por reservar! El vendedor se pondrá en contacto contigo lo antes posible.",
+    "error": "Algo salió mal. Inténtalo de nuevo.",
+    "alreadyReserved": "Lo sentimos, alguien acaba de reservar este artículo."
+  },
+  "validation": {
+    "required": "Este campo es obligatorio"
+  },
+  "admin": {
+    "login": {
+      "title": "Acceso de administrador",
+      "description": "Escribe tu email y te enviaremos un enlace para entrar. No necesitas contraseña.",
+      "email": "Email",
+      "submit": "Enviarme un enlace de acceso",
+      "sending": "Enviando...",
+      "sent": "¡Revisa tu bandeja de entrada! Enviamos un enlace de acceso a {email}. Ábrelo en este dispositivo.",
+      "error": "No pudimos enviar el enlace. Comprueba que este email esté registrado como administrador e inténtalo de nuevo.",
+      "notAdmin": "{email} ha iniciado sesión, pero no figura como administrador de esta tienda.",
+      "useAnother": "Cerrar sesión y usar otro email"
+    },
+    "nav": {
+      "products": "Productos",
+      "categories": "Categorías",
+      "logout": "Cerrar sesión",
+      "viewSite": "Ver sitio"
+    },
+    "products": {
+      "title": "Productos",
+      "new": "Nuevo producto",
+      "empty": "Todavía no hay productos",
+      "edit": "Editar",
+      "delete": "Eliminar",
+      "deleteConfirm": "¿Eliminar este producto? Esta acción no se puede deshacer.",
+      "markAvailable": "Marcar disponible",
+      "markSold": "Marcar vendido",
+      "reservedBy": "Reservado por",
+      "preview": "Vista previa"
+    },
+    "stats": {
+      "estimated": "Total estimado",
+      "sold": "Total vendido"
+    },
+    "form": {
+      "contentLanguage": "Idioma del contenido",
+      "translationHint": "Escribe el título, la descripción y el estado en cada idioma que quieras ofrecer. Se necesita al menos un título; los visitantes verán el otro idioma si falta uno.",
+      "title": "Título",
+      "description": "Descripción",
+      "condition": "Estado",
+      "conditionHint": "p. ej. \"8 meses de uso, en perfecto estado\"",
+      "availableFrom": "Disponible desde",
+      "originalLink": "Enlace original",
+      "originalLinkHint": "p. ej. la página original de la tienda",
+      "price": "Precio",
+      "category": "Categoría",
+      "selectCategory": "Selecciona una categoría",
+      "photos": "Fotos",
+      "addPhotos": "Añadir fotos",
+      "photosHint": "Arrastra para reordenar — la primera foto es la portada.",
+      "coverPhoto": "Portada",
+      "save": "Guardar",
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "saveError": "No se pudo guardar el producto. Inténtalo de nuevo.",
+      "newProduct": "Nuevo producto",
+      "editProduct": "Editar producto"
+    },
+    "categories": {
+      "title": "Categorías",
+      "new": "Nueva categoría",
+      "name": "Nombre",
+      "nameHint": "Rellena al menos un idioma.",
+      "delete": "Eliminar",
+      "add": "Añadir categoría"
+    }
+  }
+}
