@@ -17,7 +17,7 @@ Mudancy is free, open source, and runs on free tiers of [Supabase](https://supab
 
 ## Set it up in about 20 minutes
 
-You need three free accounts: [GitHub](https://github.com), [Supabase](https://supabase.com) and [Vercel](https://vercel.com). You do **not** need to install anything on your computer.
+You need: [Supabase](https://supabase.com) and [Vercel](https://vercel.com). You do **not** need to install anything on your computer.
 
 ### 1. Get your own copy of the code
 
